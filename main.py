@@ -3,8 +3,8 @@ Sample python app, doesn't do much.
 """
 from datetime import datetime
 
-import requests
 import sys
+import requests
 
 
 def get_webpage(url):
