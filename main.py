@@ -2,7 +2,6 @@
 """
 Sample python app, doesn't do much.
 """
-from __future__ import print_function
 from datetime import datetime
 
 import sys
@@ -29,7 +28,7 @@ def get_time():
     :return: datetime object
     """
     now = datetime.now()
-    return now.strftime("%Y-%m-%d [%Z %z]: %c")
+    return now.strftime("%Y-%M-%d [%Z %z]: %c")
 
 
 def main():

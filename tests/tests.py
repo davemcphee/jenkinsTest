@@ -1,8 +1,9 @@
 import main
 from datetime import datetime
+from unittest import TestCase
 
 
-class TestClass:
+class TestClass(TestCase):
 
 	def test_get_webpage_return_integer(self):
 		result = main.get_webpage('http://www.google.com')
