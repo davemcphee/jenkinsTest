@@ -1,9 +1,10 @@
 """
 Sample python app, doesn't do much.
 """
-import requests
-
 from datetime import datetime
+
+import requests
+import sys
 
 
 def get_webpage(url):
@@ -35,12 +36,14 @@ def main():
     :return: 0 or 1
     """
     # get webpage
-    r = get_webpage('http://www.google.com')
-    print("HTTP status code of trying to get webpage: %i" % r)
+    result = get_webpage('http://www.google.com')
+    print("HTTP status code of trying to get webpage: %i" % result)
 
     # get time
     current_time = get_time()
     print("Current time: %s" % current_time)
 
+    return 1
+
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
