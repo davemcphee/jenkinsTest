@@ -1,6 +1,7 @@
 """
 Sample python app, doesn't do much.
 """
+from __future__ import print_function
 from datetime import datetime
 
 import sys
