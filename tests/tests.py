@@ -34,3 +34,8 @@ class TestClass:
 		except ValueError:
 			assert False
 		assert isinstance(my_time, datetime)
+
+	def test_main_return_1_or_0(self):
+		result = main.main()
+		assert result == 1 or result == 0
+
