@@ -1,5 +1,5 @@
 import main
-
+from datetime import datetime
 
 class TestClass:
 
@@ -22,3 +22,15 @@ class TestClass:
 	def test_get_webpage_return_minus_1_on_bad_schema(self):
 		result = main.get_webpage('hrrp://www.hello.com')
 		assert result == -1
+
+	def test_get_time_return_string(self):
+		result = main.get_time()
+		assert isinstance(result, str)
+
+	def test_get_time_return_valid_time(self):
+		result = main.get_time()
+		try:
+			my_time = datetime.strptime(result[:10], "%Y-%m-%d")
+		except ValueError:
+			assert False
+		assert isinstance(my_time, datetime)
