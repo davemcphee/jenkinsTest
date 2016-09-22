@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Sample python app, doesn't do much.
 """
