@@ -28,7 +28,7 @@ def get_time():
     :return: datetime object
     """
     now = datetime.now()
-    return now.strftime("%Y-%M-%d [%Z %z]: %c")
+    return now.strftime("%Y-%m-%d [%Z %z]: %c")
 
 
 def main():
