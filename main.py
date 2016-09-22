@@ -1,10 +1,12 @@
+#!/usr/bin/env python3
 """
 Sample python app, doesn't do much.
 """
-
-import requests
-
+from __future__ import print_function
 from datetime import datetime
+
+import sys
+import requests
 
 
 def get_webpage(url):
@@ -13,12 +15,12 @@ def get_webpage(url):
     :param url: URL of webpage to get
     :return: int(status_code)
     """
-    s = requests.Session()
+    session = requests.Session()
     try:
-        r = s.get(url)
+        req = session.get(url)
     except (requests.exceptions.MissingSchema, requests.exceptions.InvalidSchema):
         return -1
-    return r.status_code
+    return req.status_code
 
 
 def get_time():
@@ -43,5 +45,7 @@ def main():
     current_time = get_time()
     print("Current time: %s" % current_time)
 
+    return 1
+
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
