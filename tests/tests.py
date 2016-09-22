@@ -1,6 +1,7 @@
 import main
 from datetime import datetime
 
+
 class TestClass:
 
 	def test_get_webpage_return_integer(self):

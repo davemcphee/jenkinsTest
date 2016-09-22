@@ -45,7 +45,7 @@ def main():
     current_time = get_time()
     print("Current time: %s" % current_time)
 
-    return 1
+    return 0
 
 if __name__ == "__main__":
     sys.exit(main())
