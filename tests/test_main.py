@@ -26,11 +26,11 @@ class TestMain(TestCase):
 
 	def test_get_webpage_return_minus_1_on_bad_schema(self):
 		result = runner.get_webpage('hrrp://www.hello.com')
-		assert result == 1
+		assert result == -1
 
 	def test_get_webpage_return_minus_1_on_integer_url(self):
 		result = runner.get_webpage(1)
-		assert result == 1
+		assert result == -1
 
 	def test_get_webpage_return_minus_1_on_null_url(self):
 		with pytest.raises(Exception) as exc:
