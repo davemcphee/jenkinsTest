@@ -25,7 +25,7 @@ def get_webpage(url):
 
 def get_time():
     """
-    Gets current time, returns datetime object
+    Gets current time, returns datetime object asdas
     :return: datetime object
     """
     now = datetime.now()

@@ -3,7 +3,7 @@ from datetime import datetime
 from unittest import TestCase
 
 
-class TestClass(TestCase):
+class TestMain(TestCase):
 
 	def test_get_webpage_return_integer(self):
 		result = main.get_webpage('http://www.google.com')
@@ -25,7 +25,7 @@ class TestClass(TestCase):
 		result = main.get_webpage('hrrp://www.hello.com')
 		assert result == -1
 
-	def test_get_webpage_return_minues_1_on_integer_url(self):
+	def test_get_webpage_return_minus_1_on_integer_url(self):
 		result = main.get_webpage(1)
 		assert result == -1
 
@@ -44,4 +44,3 @@ class TestClass(TestCase):
 	def test_main_return_1_or_0(self):
 		result = main.main()
 		assert result == 1 or result == 0
-
