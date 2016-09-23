@@ -1,5 +1,6 @@
 import os
 import sys
+import pytest
 import runner
 from datetime import datetime
 from unittest import TestCase
@@ -30,6 +31,11 @@ class TestMain(TestCase):
 	def test_get_webpage_return_minus_1_on_integer_url(self):
 		result = runner.get_webpage(1)
 		assert result == -1
+
+	def test_get_webpage_return_minus_1_on_null_url(self):
+		with pytest.raises(Exception) as exc:
+			runner.get_webpage()
+		assert exc.typename == "TypeError"
 
 	def test_get_time_return_string(self):
 		result = runner.get_time()
