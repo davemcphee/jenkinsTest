@@ -25,6 +25,10 @@ class TestClass(TestCase):
 		result = main.get_webpage('hrrp://www.hello.com')
 		assert result == -1
 
+	def test_get_webpage_return_minues_1_on_integer_url(self):
+		result = main.get_webpage(1)
+		assert result == -1
+
 	def test_get_time_return_string(self):
 		result = main.get_time()
 		assert isinstance(result, str)
