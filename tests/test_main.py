@@ -59,3 +59,7 @@ class TestMain(TestCase):
 	def test_main_return_1_or_0(self):
 		result = runner.main()
 		assert result == 1 or result == 0
+
+	def test_main_exits_with_status_code_0(self):
+		result = runner.main()
+		assert result == 0
