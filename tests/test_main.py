@@ -1,12 +1,8 @@
 import os
 import sys
+import runner
 from datetime import datetime
 from unittest import TestCase
-
-myPath = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, myPath + '/../')
-
-import runner
 
 
 class TestMain(TestCase):
