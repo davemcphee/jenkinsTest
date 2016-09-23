@@ -1,1 +1,4 @@
-{}
+{
+  "test_main.py::TestMain::test_get_webpage_return_minus_1_on_bad_schema": true,
+  "test_main.py::TestMain::test_get_webpage_return_minus_1_on_integer_url": true
+}

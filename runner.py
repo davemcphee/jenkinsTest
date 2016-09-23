@@ -9,6 +9,8 @@ import sys
 import requests
 
 
+
+
 def get_webpage(url):
     """
     uses requests to pull a webpage, return status code integer
@@ -17,10 +19,12 @@ def get_webpage(url):
     """
     session = requests.Session()
     try:
-        req = session.get(url)
+        r = session.get(url)
     except (requests.exceptions.MissingSchema, requests.exceptions.InvalidSchema):
         return -1
-    return req.status_code
+    return r.status_code
+
+
 
 
 def get_time():
@@ -46,6 +50,5 @@ def main():
     print("Current time: %s" % current_time)
 
     return 0
-
 if __name__ == "__main__":
     sys.exit(main())
