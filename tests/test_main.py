@@ -16,6 +16,13 @@ class TestMain(TestCase):
 		result = runner.get_webpage('http://www.google.com')
 		assert result == 200
 
+	def test_get_webpage_get_lots_of_pages_quickly(self):
+		times_to_run = 40
+		result = [runner.get_webpage('http://www.google.com') for x in range(times_to_run)]
+		assert len(result) == times_to_run
+		for x in result:
+			assert x == 200
+
 	def test_get_webpage_return_404_on_non_existent_webpage(self):
 		result = runner.get_webpage('http://www.google.com/asdasdasd/asdasda/asdasdaddasd/html')
 		assert result == 404
